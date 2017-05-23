@@ -3,14 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>带你见识不一样的Java异常处理 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="最近在复习JAVA基础，发现对Java异常处理感觉很陌生，只是知道一些基本的用法所有就觉得应该做一个总结，就有了这篇文章。  主要内容1. 为什么会有异常处理机制 2. 异常分类 3. 如何声明和抛出异常 4. 如何捕获异常 为什么会有异常处理机制 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在理想状态下我们的程序是没有任何的错误，但是现实并不是如此。就像用户输入数据的格式不一定正确，选择的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="带你见识不一样的Java异常处理">
+<meta property="og:url" content="http://yoursite.com/2017/05/23/带你见识不一样的Java异常处理/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="最近在复习JAVA基础，发现对Java异常处理感觉很陌生，只是知道一些基本的用法所有就觉得应该做一个总结，就有了这篇文章。  主要内容1. 为什么会有异常处理机制 2. 异常分类 3. 如何声明和抛出异常 4. 如何捕获异常 为什么会有异常处理机制 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在理想状态下我们的程序是没有任何的错误，但是现实并不是如此。就像用户输入数据的格式不一定正确，选择的">
+<meta property="og:image" content="http://i.imgur.com/neVrgS0.png">
+<meta property="og:updated_time" content="2017-05-23T14:22:12.860Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="带你见识不一样的Java异常处理">
+<meta name="twitter:description" content="最近在复习JAVA基础，发现对Java异常处理感觉很陌生，只是知道一些基本的用法所有就觉得应该做一个总结，就有了这篇文章。  主要内容1. 为什么会有异常处理机制 2. 异常分类 3. 如何声明和抛出异常 4. 如何捕获异常 为什么会有异常处理机制 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在理想状态下我们的程序是没有任何的错误，但是现实并不是如此。就像用户输入数据的格式不一定正确，选择的">
+<meta name="twitter:image" content="http://i.imgur.com/neVrgS0.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -63,9 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-带你见识不一样的Java异常处理" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-带你见识不一样的Java异常处理" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/05/23/带你见识不一样的Java异常处理/" class="article-date">
   <time datetime="2017-05-23T14:21:23.000Z" itemprop="datePublished">2017-05-23</time>
@@ -78,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/23/带你见识不一样的Java异常处理/">带你见识不一样的Java异常处理</a>
+    <h1 class="article-title" itemprop="name">
+      带你见识不一样的Java异常处理
     </h1>
   
 
@@ -210,168 +214,19 @@ finally
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Servlet工作原理解析" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/22/Servlet工作原理解析/" class="article-date">
-  <time datetime="2017-05-22T12:42:57.000Z" itemprop="datePublished">2017-05-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/22/Servlet工作原理解析/">Servlet工作原理解析</a>
-    </h1>
+    <a href="/2017/05/22/Servlet工作原理解析/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Servlet工作原理解析</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> JAVA WEB 技术是当今主流的互联网WEB应用技术之一，而Servlet则是JAVA WEB 中的核心基础。最近在看了《深入分析Java Web技术内幕》(许令波 著)这本书发现了以前没有看到的内容，就想对书中的内容进行总结，也方便自己以后的回顾，所以就有了这篇文章。</p>
-<p> 通过这篇文章你将了解到以下内容：</p>
-<pre><code>1.Servlet容器是如何工作
-2.web应用中的Servlet如何创建
-3.Servlet是如何被调用
-</code></pre><h2 id="Servlet容器的启动"><a href="#Servlet容器的启动" class="headerlink" title="Servlet容器的启动"></a>Servlet容器的启动</h2><p>   <img src="http://i.imgur.com/bod3zGl.png" alt="tomcat的体系结构"></p>
-<p>  在Tomcat中整个的体系结构中，Context容器直接管理Servlet在容器中的包装类Wrapper，所以Context是真正管理Servlet的容器。通过图我们还可以看出，一个Context对应着一个Web工程。在Tomcat配置文件中就可以看出：</p>
-<pre><code>&lt;Context path=&quot;/projectOne &quot; docBase=&quot;D:\projects\projectOne&quot; reloadable=&quot;true&quot; /&gt;
-</code></pre><p>  既然Context容器如此的重要我们就来了解下Tomcat是如何解析Context容器的。</p>
-<p>  首先，我们已经知道了Context容器是Tomcat运行时的容器，它只有在添加web应用是被加载。</p>
-<pre><code>  public Context addWebapp(Host host, String url, String path) { 
-   silence(url); 
-   Context ctx = new StandardContext(); 
-   ctx.setPath( url ); 
-   ctx.setDocBase(path); 
-   if (defaultRealm == null) { 
-       initSimpleAuth(); 
-   } 
-   ctx.setRealm(defaultRealm); 
-   ctx.addLifecycleListener(new DefaultWebXmlListener()); 
-   ContextConfig ctxCfg = new ContextConfig(); 
-   ctx.addLifecycleListener(ctxCfg); 
-   ctxCfg.setDefaultWebXml(&quot;org/apache/catalin/startup/NO_DEFAULT_XML&quot;); 
-   if (host == null) { 
-       getHost().addChild(ctx); 
-   } else { 
-       host.addChild(ctx); 
-   } 
-   return ctx; 
-}
-</code></pre><p>  当一个WEB应用被添加时Tomcat将会创建一个StandardContext容器，并给这个Context容器设置必要的参数，URL和path分别代表这个应用在访问路径和这个应用实际的物理路径。其中最重要的配置就是ContextConfig,这个类非常重要，是负责整个WEB应用的解析工作。</p>
-<p>  我们就来看看这个ContextConfig：</p>
-<pre><code>ContextConfig继承了LifecycleListener接口，它是在调用addWebApp方法时被加入到StandardContext容器中的，负责整个web应用的配置文件解析工作。
-自带的init()方法和startInternal()方法最为重要
-1.init()主要完成以下工作
-    -创建用于解析的XML配置文件的contextDisester对象。
-    -读取默认的context.xml配置文件，如果存在则解析。
-    -读取默认的Host配置文件，如果存在则解析。
-    -读取默认的Context自身的配置文件，如果存在则解析。
-    -设置Context的DocBase。
-2. startInternal()方法
-    -创建读取资源文件的对象
-    -创建ClassLoader对象。
-    -设置应用的工作目录。
-    -启动相关的辅助类。
-    -修改启动状态，通知感兴趣的观察者。
-    -子容器的初始化。
-    -获取ServletContext并设置必要的参数
-    -初始化“load on startup”的Servlet。
-</code></pre><p>  最后将这个Context容器添加到父容器中，然后就是调用Tomcat的start方法启动Tomcat。这样就完成了整个WEB应用加载的前期工作。</p>
-<h2 id="WEB应用的初始化"><a href="#WEB应用的初始化" class="headerlink" title="WEB应用的初始化"></a>WEB应用的初始化</h2><p>   学过Javaweb基础的同学应该知道，web.xml是我们整个web工程中不可缺少的一个部分，如果你的项目中缺少了它，可能就会导致一些<br>必要的BUG。同时，整个web应用的初始化主要也是解析这个文件，因为这个文件描述了你的web项目中一些关键信息，也是整个web项目的入口。</p>
-<p>  接下来我们来看下Tomcat是如何加载到这个如此重要的配置文件的。</p>
-<pre><code>1.首先会找到globalWebXml
-2.接着会找到hostWebXml
-3.最后是寻找应用的配置文件web.xml
-</code></pre><p>  完成以上的步骤之后，Tomcat会将web.xml中的相应属性保存到WebXml对象中。现在很多的后台web应用都已经升级到Servlet3.0了，如果你的项目也支持了这个版本，<strong>那么在解析配置文件的时候，还要完成Servlet3.0中新增的特性的解析以及对annotat的支持</strong>。Servlet3.0在这里就不多介绍了，他不是本文的重点内容。</p>
-<p>  将属性存入WebXml对象后，也将相关的属性设置到Context容器中，这些属性包括Servlet,listener,filter,其中Servlet被包装成具有容器属性的StandardWrapper。</p>
-<p>  看到这里我们来对web.xml的作用进行一个总结</p>
-<pre><code>1.web应用的解析入口
-2.作为用来指定context容器属性的配置文件
-</code></pre><h2 id="Servlet的创建与初始化"><a href="#Servlet的创建与初始化" class="headerlink" title="Servlet的创建与初始化"></a>Servlet的创建与初始化</h2><p>首先我们来看看Tomcat是如何创建Servlet：<br>创建Servlet实例的方法是从Wrapper.loadServlet开始的，这个方法要完成的就是获取servletClass,然后交给InstanceManager去创建一个基于servletClass.class的对象。</p>
-<p>如果在web.xml中配置了 <jsp-file>。。。。</jsp-file>这个参数的话，<strong>在创建Servlet时初始化的就不是你自己编写的JAVA类了，而是conf/web.xml中的org.apache.jasper.servlet.JspServlet。</strong> </p>
-<p>Servlet的初始化操作是在StandardWrapper的initServlet方法中完成的，作用就是调用Servlet的init(),同时将StandardWrapperFacade作为ServletConfig传给Servlet。</p>
-<pre><code>StandardWrapperFacade的作用就是从StandardWrapper中拿到的数据只是ServltConfig中规定的数据，而不把不关心的数据暴露给Servlet，起到了对数据封装的作用。
-</code></pre><p>如果初始化的是JspServlet，那Tomcat会模拟一次请求，去请求这个JSP文件，为的是将这个jsp文件编译成类，并初始化这个类，用于后面的使用。</p>
-<h2 id="Servlet如何工作"><a href="#Servlet如何工作" class="headerlink" title="Servlet如何工作"></a>Servlet如何工作</h2><p>在前面的内容中我们了解了Servlet的加载、创建、初始化，下面的内容中我们就来看看Servlet是如何被调用的。</p>
-<p>用户向服务器发送请求通常包含的信息：</p>
-<pre><code>http://hosthome:port/contextpath/servletpath
-其中 hosthome 和 port 用于与服务器建立TCP连接，而后面的URL则是用户请求服务器中的某个子容器的数据。
-</code></pre><p>我们以Tomcat这个常用的容器来说明服务器是如何根据这个URL找到正确的Servlet容器。</p>
-<pre><code>在Tomcat中这种映射工作是由org.apache.tomcat.util.http.mapper这个专门的类去处理的。
-这个类保存了Tomcat的Container容器中所有子容器的信息，当请求的Request类进入Container容器之前，
-Mapper将会根据这次请求的hostname和contextPath将host和context容器设置到Request的mappingData属性中。
-</code></pre><p>所以在请求进入容器之前就已经知道要访问那个子容器。</p>
-<p>在知道要访问那个子容器后，接下来就是要执行Servlet的service方法。我们通常的做法就是不继承javax.servlet.servlet接口更为简单的HttpServlet类。<br>但是现在的WEB应用已经直接使用Servlet来完成用户的交互逻辑了，而是使用更为高效的MVC框架来完成这些任务。<br>而这些框架的入口也是Servlet的Service方法。</p>
-<p>当Servlet从Servlet容器中移除时，也就说明Servlet的生命周期就结束了，这时Servlet的destroy方法将被调用，做一些扫尾工作。</p>
-<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>这篇文章是我的第一篇文章，如果有写的不好的地方，请各位大佬轻喷，小弟再此跪谢了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/22/Servlet工作原理解析/" data-id="cj31ngyyf0001escsaqc6ce9s" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/22/hello-world/" class="article-date">
-  <time datetime="2017-05-22T11:01:19.275Z" itemprop="datePublished">2017-05-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/22/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/22/hello-world/" data-id="cj31ngyy20000escsbpdxu7ty" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
